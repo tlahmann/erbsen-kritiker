@@ -41,3 +41,9 @@ h1 {
                  -2px  2px 2px #1A1A1A,
                  -2px -2px 2px #1A1A1A;
 }
+
+.sources {
+    font-weight: 400;
+    font-size: 0.7em;
+    line-height: 1em;
+}
