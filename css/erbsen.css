@@ -72,3 +72,13 @@ h1 {
     border: 1px solid black;
     border-radius: 5px;
 }
+
+.correct {
+    border: none;
+    color: #006500;
+}
+
+.wrong {
+    border: none;
+    color: #650000;
+}
