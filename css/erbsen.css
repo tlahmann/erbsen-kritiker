@@ -47,3 +47,18 @@ h1 {
     font-size: 0.7em;
     line-height: 1em;
 }
+
+.dd {
+    display: inline-block;
+    height: 25px;
+    width: 185px;
+    padding: 3px;
+    border-color: #1A1A1A;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    text-align: center;
+}
+
+.droppable {
+    border: 1px solid black;
+}
