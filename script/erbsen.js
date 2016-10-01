@@ -17,7 +17,6 @@ function drag(elem) {
 }
 
 function drop(elem) {
-    console.log("dropped");
     check(elem)
 }
 
@@ -28,7 +27,9 @@ function check(e) {
         if (value === $(e).attr('id')) {
             var p = $("#"+key).position();
             var q = $(e).position();
-            if (q.top >= p.top - 13 && q.top <= p.top + 20 && q.left >= p.left - 10 && q.left <= p.left + 25){
+            var dx = p.left - q.left;
+            var dy = p.top - q.top;
+            if (dy<=25 && dy>=-10 && dx<=50 && dx>=-50){
                 $(e).css('background-color', 'rgba(0, 250, 0, 0.25)');
             } else {
                 $(e).css('background-color', 'rgba(250, 0, 0, 0.25)');
