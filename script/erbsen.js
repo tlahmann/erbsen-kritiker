@@ -12,7 +12,7 @@ const solution = {
     "dd_11":"drag-aa44"
 } // dont cheat!
 
-function allowDrop(ev) {
+/* function allowDrop(ev) {
     ev.preventDefault();
 }
 
@@ -35,4 +35,16 @@ function check(targetID, dropID) {
     } else {
         d.className += " wrong";
     }
-}
+} */
+
+$('#drag-ac39').draggable();
+$('#drag-a6aa').draggable();
+$('#drag-c864').draggable();
+$('#drag-d440').draggable();
+$('#drag-f42d').draggable();
+$('#drag-aa44').draggable();
+$('#drag-d8ee').draggable();
+$('#drag-eacf').draggable();
+$('#drag-bf47').draggable();
+$('#drag-a961').draggable();
+$('#drag-e578').draggable();
