@@ -1,4 +1,4 @@
-const solution = {
+var solution = {
     "dd_1":"drag-bf47",
     "dd_2":"drag-d440",
     "dd_3":"drag-a6aa",
@@ -12,39 +12,126 @@ const solution = {
     "dd_11":"drag-aa44"
 } // dont cheat!
 
-/* function allowDrop(ev) {
-    ev.preventDefault();
+function drag(elem) {
+    $(elem).css('background-color', 'rgba(250, 250, 0, 0.25)');
 }
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-    check(ev.target.id, data);
+function drop(elem) {
+    console.log("dropped");
+    check(elem)
 }
 
 
-function check(targetID, dropID) {
-    var d = document.getElementById(dropID);
-    if (solution[targetID] == dropID) {
-        d.className += " correct";
-    } else {
-        d.className += " wrong";
+function check(e) {
+    $(solution[$(e).id]).position();
+    $.each(solution, function (key, value) {
+        if (value === $(e).attr('id')) {
+            var p = $("#"+key).position();
+            var q = $(e).position();
+            if (q.top >= p.top - 13 && q.top <= p.top + 20 && q.left >= p.left - 10 && q.left <= p.left + 25){
+                $(e).css('background-color', 'rgba(0, 250, 0, 0.25)');
+            } else {
+                $(e).css('background-color', 'rgba(250, 0, 0, 0.25)');
+            }
+        }
+    });
+}
+
+$('#drag-ac39').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
     }
-} */
+});
 
-$('#drag-ac39').draggable();
-$('#drag-a6aa').draggable();
-$('#drag-c864').draggable();
-$('#drag-d440').draggable();
-$('#drag-f42d').draggable();
-$('#drag-aa44').draggable();
-$('#drag-d8ee').draggable();
-$('#drag-eacf').draggable();
-$('#drag-bf47').draggable();
-$('#drag-a961').draggable();
-$('#drag-e578').draggable();
+$('#drag-a6aa').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-c864').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-d440').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-f42d').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-aa44').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-d8ee').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-eacf').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-bf47').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-a961').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
+
+$('#drag-e578').draggable({
+    start: function() {
+        drag(this);
+    },
+    stop: function() {
+        drop(this);
+    }
+});
