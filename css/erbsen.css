@@ -74,11 +74,17 @@ h1 {
 }
 
 .correct {
-    border: none;
-    color: #006500;
+    /* border: none; */
+    border-color: #00FF00;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    border-radius: 0px;
 }
 
 .wrong {
-    border: none;
-    color: #650000;
+    /* border: none; */
+    border-color: #FF0000;
+    border-style: solid;
+    border-width: 0 0 3px 0;
+    border-radius: 0px;
 }
